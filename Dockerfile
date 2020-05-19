@@ -18,7 +18,7 @@ RUN rm -rf tmp
 ENV GRADLE_HOME=/opt/gradle/gradle-${GRADLE_VERSION}
 ENV PATH=${GRADLE_HOME}/bin:${PATH}
 
-# Install a specific version of python3-pip
+# Install specific version of python3-pip
 RUN apt-get install -y python3-pip=18.1-5
 
 # Install specific version of Checkov
@@ -29,3 +29,9 @@ ENV TERRAFORM_VERSION=0.12.25
 RUN wget https://releases.hashicorp.com/terraform/${TERRAFORM_VERSION}/terraform_${TERRAFORM_VERSION}_linux_amd64.zip
 RUN unzip terraform_${TERRAFORM_VERSION}_linux_amd64.zip -d /usr/local/bin/
 RUN rm terraform_${TERRAFORM_VERSION}_linux_amd64.zip
+
+# Install specific version of awscli
+RUN curl https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip -o awscliv2.zip
+RUN unzip awscliv2.zip
+RUN ./aws/install
+RUN rm awscliv2.zip

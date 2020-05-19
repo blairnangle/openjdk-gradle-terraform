@@ -2,8 +2,8 @@
 
 [![CircleCI](https://circleci.com/gh/blairnangle/openjdk-gradle-terraform.svg?style=shield)](https://app.circleci.com/pipelines/github/blairnangle/openjdk-gradle-terraform)
 
-OpenJDK Docker image with Python 3, pip, Gradle, Terraform and Checkov. See [`Dockerfile`](./Dockerfile) for exact 
-versions.
+OpenJDK Docker image with Python 3, pip, Gradle, Terraform, Checkov and the AWS CLI tool. See [`Dockerfile`](./Dockerfile)
+for exact versions.
 
 Written with the intention of creating a single, consistent CircleCI container image for Java applications that 
 deploy their infrastructure with Terraform in the same pipeline (but are not necessarily deployed as containerized
